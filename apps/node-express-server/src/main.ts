@@ -1,18 +1,29 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
+const express = require('express')
+const cors = require('cors')
 
-import * as express from 'express';
+const utility = require('./app/utility/utility');
+const nasa_controller = require('./app/controllers/nasaController')
+const auth_controller = require('./app/controllers/authController')
 
-const app = express();
+const app = express()
+const port = 3000
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to node-express-server!' });
-});
+app.use(cors())
 
-const port = process.env.port || 3333;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
-});
-server.on('error', console.error);
+app.get('/bingo', (req, res) => {
+  res.send('{"content":"Hello to one and all in the BINGO world!"}')
+})
+
+app.get('/', (req, res) => {
+  res.send('{"content":" : ) "}')
+})
+
+app.get('/nasa', utility.requireLogin, nasa_controller.nasaFetch)
+
+app.get('/auth', auth_controller.auth)
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+app.on('error', console.error);
