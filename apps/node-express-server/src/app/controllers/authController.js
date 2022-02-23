@@ -10,7 +10,7 @@ exports.auth = function(req, res) {
   // res.sendStatus(401)
   // else
 
-  fs.readFile('./topSecret.txt', 'utf8' , (err, data) => {
+  fs.readFile('./secrets/topSecret2.txt', 'utf8' , (err, data) => {
     if (err) {
       console.error(err);
       return;

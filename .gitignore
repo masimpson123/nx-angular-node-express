@@ -1,3 +1,5 @@
 // created with "touch .gitignore"
 
 secrets/
+dist/
+node_modules/
