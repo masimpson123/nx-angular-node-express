@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/node-tests",
+  "sourceRoot": "libs/node-tests/src",
+  "prefix": "michael-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/node-tests"],
+      "options": {
+        "jestConfig": "libs/node-tests/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/node-tests/src/**/*.ts",
+          "libs/node-tests/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

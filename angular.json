@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "node-express-server": "apps/node-express-server",
+    "node-tests": "libs/node-tests",
+    "super-app-ui": "apps/super-app-ui",
+    "super-app-ui-e2e": "apps/super-app-ui-e2e"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "root": "apps/super-app-ui-e2e",
+  "sourceRoot": "apps/super-app-ui-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/super-app-ui-e2e/cypress.json",
+        "devServerTarget": "super-app-ui:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "super-app-ui:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/super-app-ui-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["super-app-ui"]
+}
