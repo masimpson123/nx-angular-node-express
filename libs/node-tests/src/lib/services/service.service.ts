@@ -16,13 +16,12 @@ export class ServiceService {
     });
   }
 
-  nasa(domain = 'http://localhost:3000', path = '/nasa'): Observable<any> {
+  nasa(domain = 'http://localhost:3000', path = '/nasa'): Observable<unknown> {
     const httpOptions = {
       headers: new HttpHeaders({
         Authorization: localStorage.getItem("Authorization") ?? "no-token",
       })
     };
-    console.log(httpOptions);
     return this.http.get(domain + path, httpOptions);
   }
 }
