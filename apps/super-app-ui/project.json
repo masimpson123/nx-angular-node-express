@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/super-app-ui",
         "index": "apps/super-app-ui/src/index.html",
@@ -17,7 +19,9 @@
           "apps/super-app-ui/src/favicon.ico",
           "apps/super-app-ui/src/assets"
         ],
-        "styles": ["apps/super-app-ui/src/styles.css"],
+        "styles": [
+          "apps/super-app-ui/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -82,12 +86,16 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/super-app-ui"],
+      "outputs": [
+        "coverage/apps/super-app-ui"
+      ],
       "options": {
         "jestConfig": "apps/super-app-ui/jest.config.js",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["scope:client"]
+  "tags": [
+    "scope:client"
+  ]
 }

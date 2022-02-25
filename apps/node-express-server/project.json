@@ -5,12 +5,16 @@
   "targets": {
     "build": {
       "executor": "@nrwl/node:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/node-express-server",
         "main": "apps/node-express-server/src/main.ts",
         "tsConfig": "apps/node-express-server/tsconfig.app.json",
-        "assets": ["apps/node-express-server/src/assets"]
+        "assets": [
+          "apps/node-express-server/src/assets"
+        ]
       },
       "configurations": {
         "production": {
@@ -34,14 +38,20 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/node-express-server/**/*.ts"]
+        "lintFilePatterns": [
+          "apps/node-express-server/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/node-express-server"],
+      "outputs": [
+        "coverage/apps/node-express-server"
+      ],
       "options": {
         "jestConfig": "apps/node-express-server/jest.config.js",
         "passWithNoTests": true

@@ -4,3 +4,4 @@ secrets/
 dist/
 node_modules/
 .angular/
+.angular
