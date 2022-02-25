@@ -3,8 +3,8 @@
   "projects": {
     "node-express-server": "apps/node-express-server",
     "node-tests": "libs/node-tests",
-    "node-tests-server": "libs/node-tests-server",
     "super-app-ui": "apps/super-app-ui",
-    "super-app-ui-e2e": "apps/super-app-ui-e2e"
+    "super-app-ui-e2e": "apps/super-app-ui-e2e",
+    "utility": "libs/utility"
   }
 }

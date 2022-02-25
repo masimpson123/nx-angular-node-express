@@ -21,11 +21,8 @@
       "@michael-nx/node-tests": [
         "libs/node-tests/src/index.ts"
       ],
-      "@michael-nx/node-tests-server": [
-        "libs/node-tests-server/src/index.ts"
-      ],
-      "@michael-nx/products": [
-        "libs/products/src/index.ts"
+      "@michael-nx/utility": [
+        "libs/utility/src/index.ts"
       ]
     }
   },
