@@ -21,7 +21,7 @@
                 "onlyDependOnLibsWithTags": ["scope:client"]
               },
               {
-                "sourceTag": "scope:client",
+                "sourceTag": "scope:server",
                 "onlyDependOnLibsWithTags": ["scope:server"]
               }
             ]

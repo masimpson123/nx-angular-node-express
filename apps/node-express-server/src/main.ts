@@ -1,9 +1,9 @@
-const express = require('express')
-const cors = require('cors')
+import express = require('express');
+import cors = require('cors')
 
-const utility = require('./app/utility/utility');
-const nasa_controller = require('./app/controllers/nasaController')
-const auth_controller = require('./app/controllers/authController')
+import nasa_controller = require('./app/controllers/nasaController')
+import auth_controller = require('./app/controllers/authController')
+import utility = require('@michael-nx/utility');
 
 const app = express()
 const port = 3000
