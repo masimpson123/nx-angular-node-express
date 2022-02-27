@@ -18,11 +18,11 @@
             "depConstraints": [
               {
                 "sourceTag": "scope:client",
-                "onlyDependOnLibsWithTags": ["scope:client"]
+                "onlyDependOnLibsWithTags": ["scope:client", "common"]
               },
               {
                 "sourceTag": "scope:server",
-                "onlyDependOnLibsWithTags": ["scope:server"]
+                "onlyDependOnLibsWithTags": ["scope:server", "common"]
               }
             ]
           }

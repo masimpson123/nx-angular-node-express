@@ -1,5 +1,6 @@
 import express = require('express')
 import cors = require('cors')
+import { common } from '@michael-nx/common';
 
 import nasa_controller = require('./app/controllers/nasaController')
 import auth_controller = require('./app/controllers/authController')
@@ -23,6 +24,7 @@ app.get('/nasa', utility.requireLogin, nasa_controller.nasaFetch)
 app.get('/auth', auth_controller.auth)
 
 app.listen(port, () => {
+  console.log(common());
   console.log(`Example app listening on port ${port}`)
 })
 

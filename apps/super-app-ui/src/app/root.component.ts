@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ServiceService } from '@michael-nx/node-tests';
+import { common } from '@michael-nx/common';
 
 /* eslint-disable */
 
@@ -16,7 +17,9 @@ import { ServiceService } from '@michael-nx/node-tests';
 export class NxWelcomeComponent {
   content: any;
 
-  constructor(public service: ServiceService) {}
+  constructor(public service: ServiceService) {
+    console.log(common());
+  }
 
   auth(): void {
     this.service.auth();
