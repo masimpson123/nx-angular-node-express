@@ -1,4 +1,4 @@
-import express = require('express');
+import express = require('express')
 import cors = require('cors')
 
 import nasa_controller = require('./app/controllers/nasaController')

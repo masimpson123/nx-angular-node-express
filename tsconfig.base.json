@@ -18,6 +18,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@michael-nx/common": [
+        "libs/common/src/index.ts"
+      ],
       "@michael-nx/node-tests": [
         "libs/node-tests/src/index.ts"
       ],
