@@ -11,8 +11,6 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
   auth(domain = 'http://localhost:3000', path = '/auth') {
-    console.log("AUTH!");
-    console.log("AUTH!");
     this.http.get<Auth>(domain + path).subscribe((res: Auth) => {
       localStorage.setItem("Authorization",res.token);
     });
