@@ -1,6 +1,6 @@
 import express = require('express')
 import cors = require('cors')
-import { common } from '@michael-nx/common';
+import { common } from '@michael-nx/common'
 
 import nasa_controller = require('./app/controllers/nasaController')
 import auth_controller = require('./app/controllers/authController')
@@ -17,6 +17,12 @@ app.get('/bingo', (req, res) => {
 
 app.get('/', (req, res) => {
   res.send('{"content":" : ) "}')
+})
+
+app.get('/env', (req, res) => {
+  res.send(
+    `{"user":"${process.env.USER_ID}",
+    "key":"${process.env.API_KEY}"}`)
 })
 
 app.get('/nasa', utility.requireLogin, nasa_controller.nasaFetch)
