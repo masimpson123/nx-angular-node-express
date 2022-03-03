@@ -8,9 +8,10 @@ export function requireLogin(req, res, next) {
           return;
         }
         try {
-            jwt.verify(req.get("Authorization"), secret)
+            jwt.verify(req.get("Authorization"), secret + process.env.ENV_SECRET)
             next();
         } catch {
+            // this failure case is handled by an angular interceptor
             res.sendStatus(401)
         }        
     })
